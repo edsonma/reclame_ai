@@ -8,7 +8,6 @@ default: &default
   adapter: mysql2
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   port: 3306
-  socket: /tmp/mysql.sock
 
 development:
   host: localhost
@@ -24,6 +23,7 @@ test:
   <<: *default
   host: localhost
   database: reclameai_test
+  socket: /tmp/mysql.sock
 
 production:
   <<: *default
