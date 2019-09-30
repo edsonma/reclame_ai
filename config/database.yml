@@ -21,9 +21,5 @@ test:
   <<: *default
 
 production:
-  username: bfae42be72247b
-  password: 3b11dc4b
-  host: mysql2://bfae42be72247b:3b11dc4b@us-cdbr-iron-east-05.cleardb.net/heroku_cc085f98909da77?reconnect=true
-  port: 3306
-  database: reclemai_production
+  url: <%= ENV['DATABASE_URL'] %>
   <<: *default
