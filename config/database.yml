@@ -1,8 +1,6 @@
 # SQLite version 3.x
 #   gem install sqlite3
 #
-#   Ensure the SQLite 3 gem is defined in your Gemfile
-#   gem 'sqlite3'
 #
 default: &default
   adapter: mysql2
@@ -20,13 +18,13 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  <<: *default
   host: localhost
   database: reclameai_test
   socket: /tmp/mysql.sock
+  <<: *default
 
 production:
-  <<: *default
   username: bab042b78a7b34
   password: 86b48081
   database: reclemai_production
+  <<: *default
