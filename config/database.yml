@@ -21,8 +21,9 @@ test:
   <<: *default
 
 production:
-  host: mysql://bab042b78a7b34:86b48081@us-cdbr-iron-east-02.cleardb.net/heroku_4439556870ad57f?reconnect=true
-  username: bab042b78a7b34
-  password: 86b48081
+  username: bfae42be72247b
+  password: 3b11dc4b
+  host: mysql2://bfae42be72247b:3b11dc4b@us-cdbr-iron-east-05.cleardb.net/heroku_cc085f98909da77?reconnect=true
+  port: 3306
   database: reclemai_production
   <<: *default
