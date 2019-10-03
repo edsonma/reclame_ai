@@ -1,0 +1,33 @@
+
+
+
+
++---------------------------+
+|     Complain              |
+|---------------------------+     +------------------------+
+|                           |     |      Locale            |
+|    name                   |     +------------------------+
+|    email                  |     |     longitude          |
+|    phone                  |     |     latitude           |
+|    order_number           |     |     country            |
+|    shipping_zipcode       |     |     city               |
+|    description            |     |                        |
+|    locale_id              |     +------------------------+
+|                           |
++---------------------------+     +------------------------+
+                                  |       User             |
+                                  +------------------------+
++---------------------------+     |                        |
+|      Order                |     |                        |
++---------------------------+     |    email               |
+|                           |     |    name                |
+|    user_id                |     |    password_digest     |
+|    shipping_address       |     |                        |
+|    shipping_zipcode       |     |                        |
+|    order_number           |     +------------------------+
+|    description            |
+|    ordered_date           |
+|    locate_id              |
++---------------------------+
+
+
