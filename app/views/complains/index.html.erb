@@ -1,0 +1,8 @@
+<h1> Complains </h1>
+
+<% if @complains.each do |complain| %>
+  <h3>Pedido: <%= link_to complain.order, complain %> </h3>
+  <p>Endereço de Entrega: <%= complain.shipping_zipcode %> </p>
+  <% end.empty? %>
+    <p> Who haa! Não há reclamações na base! </p>
+<% end %>
