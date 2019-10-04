@@ -1,2 +1,21 @@
-<h1>Complains#show</h1>
-<p>Find me in app/views/complains/show.html.erb</p>
+<h1>Reclamação: (Pedido#<%= @complain.order %>)</h1>
+
+<h2> Informações da reclamação </h2>
+<p> Nome Reclamante: <%= @complain.name %> </p>
+<p> Email: <%= @complain.email %> </p>
+<p> Telefone: <%= @complain.phone %> </p>
+<p> Cep Entrega: <%= @complain.shipping_zipcode %> </p>
+<p> Descrição do ocorrido: <%= @complain.description %> </p>
+<p> Localização: <br />
+<blockquote>
+  <p> País: <%= @complain.locale.country %> </p>
+  <p> Cidade: <%= @complain.locale.city %> </p>
+  <p>
+    <small> Latitude/Longitude:
+    <%= @complain.locale.latitude %> /
+    <%= @complain.locale.longitude %>
+    </small>
+  </p>
+</blockquote>
+
+<%= link_to "Back", complains_path %>
