@@ -17,6 +17,8 @@ development:
 # Do not set this db to the same as development or production.
 test:
   host: localhost
+  username: root
+  password: root
   database: reclameai_test
   <<: *default
 

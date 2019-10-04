@@ -4,7 +4,7 @@ class CreateComplains < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :email
       t.string :phone
-      t._number :order
+      t.numeric :order
       t.integer :shipping_zipcode
       t.text :description
       t.belongs_to :locale, foreign_key: true
