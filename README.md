@@ -1,6 +1,6 @@
 # README - Reclame Aí!
 
-Aplicativo exemplo para abertura de reclamações para empresas varejistas.
+Aplicativo exemplo para abertura de reclamações de entregas de varejistas.
 
 
 Versões:
