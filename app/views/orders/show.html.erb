@@ -1,0 +1,9 @@
+<h1> Pedido: <%= @order.order_number %> </h1>
+
+<h2> # Mapa da localização do pedido </h2>
+<p>
+  <small>Latitude: <%= @order.locale.latitude %> |
+    Longitude: <%= @order.locale.longitude %>
+  </small>
+</p>
+<%= link_to "Back", orders_path %>

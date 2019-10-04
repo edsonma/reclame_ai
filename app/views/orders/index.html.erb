@@ -1,0 +1,18 @@
+<!-- 
+  # todo: - sistema de roles para que seja exibido apenas os pedidos de um usuario especifico
+  #       - ... e caso seja um user admin, exibir tudo mesmo
+--> 
+
+<h1> Orders </h1>
+
+<% @orders.each do |order| %>
+  id: <%= order.id %>
+  <h2>Number: <%= link_to order.order_number, order %></h2>
+  <small> <%= order.created_at.strftime("%b %d, %Y") %></small>
+
+  <p>Endereço Entrega: <%= order.shipping_address %></p>
+  <p>Cep Entrega: <%= order.shipping_zipcode %></p>
+  <p>Descrição: <%= order.description %><p>
+
+  <hr />
+<% end %>
