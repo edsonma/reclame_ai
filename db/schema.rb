@@ -10,7 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_03_193418) do
+ActiveRecord::Schema.define(version: 2019_10_04_024716) do
+
+  create_table "complains", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "phone"
+    t.decimal "order", precision: 10
+    t.integer "shipping_zipcode"
+    t.text "description"
+    t.bigint "locale_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["locale_id"], name: "index_complains_on_locale_id"
+  end
+
+  create_table "locales", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.float "latitude"
+    t.float "longitude"
+    t.string "country"
+    t.string "city"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "shipping_address"
+    t.integer "shipping_zipcode"
+    t.integer "order_number"
+    t.text "description"
+    t.timestamp "order_date"
+    t.bigint "user_id"
+    t.bigint "locale_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["locale_id"], name: "index_orders_on_locale_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -20,4 +56,7 @@ ActiveRecord::Schema.define(version: 2019_10_03_193418) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "complains", "locales"
+  add_foreign_key "orders", "locales"
+  add_foreign_key "orders", "users"
 end
