@@ -16,5 +16,5 @@ order3 = Order.create! user_id: user2.id, shipping_address: "SDC (Setor de Difus
 order4 = Order.create! user_id: user3.id, shipping_address: "QE 23 Área Especial s/n Feira do Guará", shipping_zipcode: "71025100", order_number: "123571237", description: "Primeiro item do pedido", order_date: Time.now.to_i, locale_id: locale4.id
 order5 = Order.create! user_id: user4.id, shipping_address: "QE 23 Área Especial s/n Feira do Guará", shipping_zipcode: "7102510", order_number: "12381238", description: "Primeiro item do pedido", order_date: Time.now.to_i, locale_id: locale4.id
 
-complain1 = Complain.create! name: "Edson Ma", email: "edsonma@gmail.com", phone: "1234567890", order: order1.order_number, shipping_zipcode: "12341234",  description: "Veio sem pilha", locale_id: locale1.id
+complain1 = Complain.create! name: "Edson Ma", email: "edsonma@gmail.com", phone: "1234567890", order: order1.order_number, shipping_zipcode: "12341234",  description: "Veio sem pilha", locale_id: locale1.id, maybe_fraud: false
 

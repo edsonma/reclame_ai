@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_04_024716) do
+ActiveRecord::Schema.define(version: 2019_10_07_042631) do
 
   create_table "complains", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 2019_10_04_024716) do
     t.bigint "locale_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "maybe_fraud"
+    t.string "ip_address"
     t.index ["locale_id"], name: "index_complains_on_locale_id"
   end
 
