@@ -1,12 +1,12 @@
 class ComplainsController < ApplicationController
   def new
-    @ip_address = request.env['HTTP_X_FORWARDED_FOR'];
     @complain = Complain.new
   end
 
   def create
     @complain = Complain.new(allowed_params)
     @complain.maybe_fraud = false;
+    @complain.ip_address = request.remote_ip
 
     if @complain.save
       redirect_to root_url, notice: 'Agradeço o envio!'
