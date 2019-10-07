@@ -5,27 +5,27 @@
 <%= form_for @complain do |f| %>
   <p>
     <%= f.label :name %> <br />
-    <%= f.text_field :name %> <br />
+    <%= f.text_field :name, placeholder: 'Name', :required => true %> <br />
   </p>
   <p>
     <%= f.label :email %> <br />
-    <%= f.text_field :email %> <br />
+    <%= f.text_field :email, type: 'email', placeholder: 'Email', :required => true  %> <br />
   </p>
   <p>
     <%= f.label :phone %> <br />
-    <%= f.text_field :phone %> <br />
+    <%= f.text_field :phone, :required => true  %> <br />
   </p>
   <p>
     <%= f.label :order %> <br />
-    <%= f.text_field :order %> <br />
+    <%= f.text_field :order, maxlength: 8, :required => true  %> <br />
   </p>
   <p>
     <%= f.label :shipping_zipcode %> <br />
-    <%= f.text_field :shipping_zipcode %> <br />
+    <%= f.text_field :shipping_zipcode, maxlength: 8, :required => true  %> <br />
   </p>
   <p>
     <%= f.label :description %> <br />
-    <%= f.text_area :description %> <br />
+    <%= f.text_area :description, :required => true  %> <br />
   </p>
 
   <p>
