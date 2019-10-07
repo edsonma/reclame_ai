@@ -1,6 +1,7 @@
-
-
-
+#
+#  Model for ReclameAí
+#  Version R1
+#
 
 +---------------------------+
 |     Complain              |
@@ -9,11 +10,12 @@
 |    name                   |     +------------------------+
 |    email                  |     |     longitude          |
 |    phone                  |     |     latitude           |
-|    order_number           |     |     country            |
+|    order                  |     |     country            |
 |    shipping_zipcode       |     |     city               |
 |    description            |     |                        |
 |    locale_id              |     +------------------------+
-|                           |
+|    maybe_fraud            |
+|    ip_address             |
 +---------------------------+     +------------------------+
                                   |       User             |
                                   +------------------------+
