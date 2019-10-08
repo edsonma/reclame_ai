@@ -24,11 +24,11 @@ Heroku - reclame-ai.herokuapp.com
   - heroku run rake db:migrate
   - heroku run rake db:seed
 
-* Login:passwd da aplicação
+Login:passwd da aplicação
    - admin@reclameai.com:admin
    - Nesse login consegue ver os Pedidos e as Reclamacões
 
-* Tela principal 
+Tela principal 
  - Possui um formulario para a pessoa preencher as reclamações
  
 Hipoteses de teste de fraude:
