@@ -5,9 +5,12 @@
 <p> Email: <%= @complain.email %> </p>
 <p> Telefone: <%= @complain.phone %> </p>
 <p> Cep Entrega: <%= @complain.shipping_zipcode %> </p>
+<p> Endereço: <%= @address %> </p>
 <p> Descrição do ocorrido: <%= @complain.description %> </p>
 <p> Localização: <br />
+
 <blockquote>
+  <% if @complain.locale %>
   <p> País: <%= @complain.locale.country %> </p>
   <p> Cidade: <%= @complain.locale.city %> </p>
   <p>
@@ -16,6 +19,9 @@
     <%= @complain.locale.longitude %>
     </small>
   </p>
+  <% else %>
+    <p>Geo localização não encontrada! </p>
+  <% end %>
 </blockquote>
 
 <%= link_to "Back", complains_path %>
