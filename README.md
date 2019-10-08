@@ -24,12 +24,19 @@ Heroku - reclame-ai.herokuapp.com
   - heroku run rake db:migrate
   - heroku run rake db:seed
 
+* Login:passwd da aplicação
+   - admin@reclameai.com:admin
+   - Nesse login consegue ver os Pedidos e as Reclamacões
+
+* Tela principal 
+ - Possui um formulario para a pessoa preencher as reclamações
+ 
 Hipoteses de teste de fraude:
   - Se o cep da reclamação não estiver em nenhum pedido, ALERTA!
   - Se o numero do pedido não existir na base de pedidos, ALERTA!
   - Se a geolocalização do pedido é fora do Brasil, ALERTA!
   - Todo: buscar se a geolocalização da reclamação foi criada pouco tempo e muito distante do endereço de entrega
- 
+
 Todo: 
   * Faltou testes
-
+  * Melhorar o seed.rb
