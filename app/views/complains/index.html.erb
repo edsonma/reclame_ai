@@ -1,16 +1,18 @@
+<!-- todo: Pagination and get the reason of suspect of Fraud -->
+
 <h1> Complains </h1>
 
 <% if @complains.each do |complain| %>
   <div>
     <h3>
        Pedido: <%= link_to complain.order, complain %>
-     <% if complain.maybe_fraud == true %>
+     <% if complain.maybe_fraud == "1" then %>
        <i class="glyphicon glyphicon-alert" style="color:red"></i>
      <% else %>
        <i class="glyphicon glyphicon-ok" style="color:green"></i>
      <% end %>
     </h3>
-    <p>Endereço de Entrega: <%= complain.shipping_zipcode %> </p>
+    <p>Cep do Endereço de Entrega: <%= complain.shipping_zipcode %> </p>
     <% end.empty? %>
     <p> Who haa! Não há reclamações na base! </p>
   </div>

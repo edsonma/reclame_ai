@@ -32,8 +32,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
-# rest-client
-gem 'rest-client', '~> 1.8'
+# faraday client
+gem 'faraday'
 #
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
