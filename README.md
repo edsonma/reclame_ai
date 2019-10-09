@@ -40,3 +40,5 @@ Hipoteses de teste de fraude:
 Todo: 
   * Faltou testes
   * Melhorar o seed.rb
+  * Criar Rakefile tasks
+
